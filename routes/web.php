@@ -24,3 +24,5 @@ Route::get('/repair/{id}/edit', [RepairRequestController::class, 'edit'])->name(
 
 // บันทึกการแก้ไขข้อมูล
 Route::put('/repair/{id}', [RepairRequestController::class, 'update'])->name('repair.update');
+
+Route::get('/repair/{id}', [RepairRequestController::class, 'show'])->name('repair.show');

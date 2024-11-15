@@ -93,10 +93,13 @@
 
     <!-- Sidebar -->
     <div class="sidebar" id="sidebar">
-        <h2 class="text-center text-white mb-4">ระบบแจ้งซ่อม</h2>
-        <a href="{{ route('repair.index') }}">หน้ารายการแจ้งซ่อม</a>
-        <a href="{{ route('repair.create') }}">หน้ากรอกข้อมูลแจ้งซ่อม</a>
+    <div class="text-center mb-5"> <!-- Increased margin-bottom here -->
+        <img src="{{ asset('image/tsu.png') }}" alt="ระบบแจ้งซ่อม Logo" style="width: 200px; height: auto;">
     </div>
+    <h2 class="text-center text-white mb-4" style="margin-left: 20px;">ระบบแจ้งซ่อม</h2>
+    <a href="{{ route('repair.index') }}">รายการแจ้งซ่อม</a>
+    <a href="{{ route('repair.create') }}">กรอกข้อมูลแจ้งซ่อม</a>
+</div>
 
     <!-- Main Content -->
     <div class="main-content" id="mainContent">

@@ -32,15 +32,17 @@
                             <td>{{ $request->campus }}</td>
                             <td>{{ $request->reporter }}</td>
                             <td>
+                                <a href="{{ route('repair.show', $request->id) }}" class="btn btn-info btn-sm">ดู</a>
                                 <a href="{{ route('repair.edit', $request->id) }}" class="btn btn-warning btn-sm">แก้ไข</a>
 
                                 <!-- ปุ่มลบ -->
-                                <form action="{{ route('repair.destroy', $request->id) }}" method="POST" onsubmit="return confirm('คุณต้องการลบรายการนี้ใช่หรือไม่?');">
+                                <form action="{{ route('repair.destroy', $request->id) }}" method="POST" onsubmit="return confirm('คุณต้องการลบรายการนี้ใช่หรือไม่?');" style="display:inline;">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="btn btn-danger btn-sm">ลบ</button>
                                 </form>
                             </td>
+
                         </tr>
                     @endforeach
                 </tbody>

@@ -81,4 +81,10 @@ class RepairRequestController extends Controller
         return redirect()->route('repair.index')->with('success', 'ลบรายการแจ้งซ่อมสำเร็จ');
     }
 
+        public function show($id)
+    {
+        $request = RepairRequest::findOrFail($id); // Adjust model name if necessary
+        return view('repair.show', compact('request'));
+    }
+
 }
